@@ -12,13 +12,34 @@
       width="220"
       height="220"
     >
-    <div class="ml-[250px] mt-4 mb-4 flex justify-between">
+    <div class="ml-[250px] mt-4 mb-4 flex justify-between rounded-2xl px-2 py-3">
       <h1 class="text-4xl font-bold">Neko</h1>
       <div class="pt-[10px] space-x-1">
-        <UIcon name="i-ic:baseline-discord" class="text-3xl font-bold" />
-        <UIcon name="i-mdi:github" class="text-3xl font-bold" />
-        <UIcon name="i-dashicons:admin-links" class="text-3xl font-bold" />
+        <a href="https://discord.gg/etDaKurrXM" target="_blank" rel="noopener">
+          <UIcon name="i-ic:baseline-discord" class="icon-hover discord text-3xl font-bold cursor-pointer" />
+        </a>
+        <a href="https://github.com/obouhlel/discord-bot" target="_blank" rel="noopener">
+          <UIcon name="i-mdi:github" class="icon-hover github text-3xl font-bold cursor-pointer" />
+        </a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1370139865555144704" target="_blank" rel="noopener">
+          <UIcon name="i-dashicons:admin-links" class="icon-hover link text-3xl font-bold cursor-pointer" />
+        </a>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.discord:hover {
+  color: #7289da;
+}
+.github:hover {
+  color: #000;
+}
+.link:hover {
+  color: #7b79c5;
+}
+.icon-hover:hover {
+  transition: color 0.2s;
+}
+</style>
