@@ -1,4 +1,7 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+const isClient = ref(false)
+onMounted(() => { isClient.value = true })
 const colorMode = useColorMode()
 const modes = [
   { value: 'system', icon: 'uil:monitor', label: 'System' },
@@ -6,10 +9,11 @@ const modes = [
   { value: 'dark', icon: 'uil:moon', label: 'Dark' }
 ]
 </script>
+
 <template>
   <header class="w-full h-12 bg-gray-400/50 dark:bg-black/50 flex items-center justify-between px-4">
     <h1 class="text-2xl font-bold">Neko</h1>
-    <div class="flex gap-2">
+    <div v-if="isClient" class="flex gap-2">
       <button
         v-for="mode in modes"
         :key="mode.value"
