@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  color: black;
+  background-color: #FFF;
+}
+
+.dark body {
+  color: white;
+  background-color: #000;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
+  background-image: url('/assets/img/discord-logo.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 100px;
+  transform: rotate(-30deg);
+  filter: hue-rotate(80deg) saturate(2);
+  opacity: 0.1;
+  z-index: -1;
+}
