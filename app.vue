@@ -1,6 +1,7 @@
 <script setup>
 useHead({
-  title: 'Neko | Discord bot'
+  title: 'Neko | Discord bot',
+  class: 'dark',
 })
 </script>
 

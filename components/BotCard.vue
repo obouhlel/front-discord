@@ -12,7 +12,7 @@
       width="220"
       height="220"
     >
-    <div class="ml-[250px] mt-4 mb-4 flex justify-between rounded-2xl px-2 py-3">
+    <div class="ml-[250px] mt-4 mb-4 flex justify-between rounded-2xl px-2 py-3 bg-gray-400/50 dark:bg-black/50">
       <h1 class="text-4xl font-bold">Neko</h1>
       <div class="pt-[10px] space-x-1">
         <a href="https://discord.gg/etDaKurrXM" target="_blank" rel="noopener">
@@ -34,7 +34,7 @@
   color: #7289da;
 }
 .github:hover {
-  color: #000;
+  color: #555;
 }
 .link:hover {
   color: #7b79c5;

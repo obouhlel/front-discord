@@ -5,6 +5,18 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/global.css'],
 
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storage: 'localStorage',
+    storageKey: 'data-theme'
+  },
+
   modules: [
     "@nuxt/eslint",
     "@nuxt/fonts",

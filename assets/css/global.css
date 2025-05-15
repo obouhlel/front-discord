@@ -17,10 +17,10 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: -50vh;
-  left: -50vw;
-  width: 200vw;
-  height: 200vh;
+  top: -250vh;
+  left: -250vw;
+  width: 500vw;
+  height: 500vh;
   background-image: url('/assets/img/discord-logo.png');
   background-repeat: repeat;
   background-position: center;
