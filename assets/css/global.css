@@ -11,12 +11,7 @@ html {
 body {
   position: relative;
   color: black;
-  background-color: #FFF;
-}
-
-.dark body {
-  color: white;
-  background-color: #000;
+  background-color: var(--color-pink-50);
 }
 
 body::before {
@@ -29,9 +24,22 @@ body::before {
   background-image: url('/assets/img/discord-logo.png');
   background-repeat: repeat;
   background-position: center;
-  background-size: 100px;
+  background-size: 50px;
   transform: rotate(-30deg);
   filter: hue-rotate(80deg) saturate(2);
   opacity: 0.1;
+  z-index: -1;
+}
+
+.dark body {
+  color: white;
+  background-color: rgb(121, 52, 80);
+}
+
+.dark body::before {
+  background-image: url('/assets/img/discord-logo-dark.png');
+  /* background-image: none; */
+  opacity: 0.1;
+  filter: none;
   z-index: -1;
 }

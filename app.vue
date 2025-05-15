@@ -3,6 +3,7 @@ useHead({
   title: 'Neko | Discord bot'
 })
 </script>
+
 <template>
   <div>
     <NuxtLayout>
