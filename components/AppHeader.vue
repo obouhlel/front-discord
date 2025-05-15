@@ -7,7 +7,7 @@ const modes = [
 ]
 </script>
 <template>
-  <header class="w-screen h-12 bg-gray-400/50 dark:bg-black/50 flex items-center justify-between px-4">
+  <header class="w-full h-12 bg-gray-400/50 dark:bg-black/50 flex items-center justify-between px-4">
     <h1 class="text-2xl font-bold">Neko</h1>
     <div class="flex gap-2">
       <button
