@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Command } from '~/types/bot-info.type';
+import type { Command } from '~/types/command.type';
 import capitalize from '~/utils/capitalize'
 
 const props = defineProps<{command: Command}>()
