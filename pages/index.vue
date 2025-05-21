@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import type { Commands } from '~/types/command.type';
 
-const { data, pending, error } = useFetch<{commands: Commands}>('https://api.neko.oustopie.xyz/commands');
+const config = useRuntimeConfig();
+const { data, pending, error } = useFetch<{commands: Commands}>("/commands", {
+  baseURL: config.public.BACK_URL,
+});
 </script>
 <template>
   <div class="flex flex-col items-center justify-start mt-5 px-2">
