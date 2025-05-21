@@ -9,7 +9,7 @@ const modes = [
 const mounted = ref<boolean>(false);
 const { user, login, logout, fetchUser } = useAuth();
 
-fetchUser().then(() => console.log("Fetch end, user = ", user.value));
+await fetchUser();
 
 const handleLogin = () => {
   login()
@@ -21,10 +21,6 @@ const handleLogout = async () => {
 
 onMounted(() => {
   mounted.value = true;
-})
-
-watch(user, (val) => {
-  console.log(val)
 })
 </script>
 
