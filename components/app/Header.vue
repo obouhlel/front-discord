@@ -27,11 +27,10 @@ onMounted(() => {
 <template>
   <header class="w-full h-16 bg-gray-400/50 dark:bg-black/50 flex items-center justify-between px-4">
     <h1 class="text-2xl font-bold">Neko</h1>
-    <h1 class="text-2xl font-bold">{{ user?.name }}</h1>
     <div class="flex gap-2 mr-5">
       <UiButton v-if="!user" @click="handleLogin">Login</UiButton>
       <UiButton v-else @click="handleLogout">Logout</UiButton>
-      <button 
+      <button
         v-for="mode in modes" :key="mode.value" class="text-2xl font-bold transition-colors"
         :class="mounted && colorMode.preference === mode.value ? 'text-pink-500' : 'text-black dark:text-white'"
         :aria-label="mode.label" @click="colorMode.preference = mode.value">

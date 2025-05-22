@@ -1,6 +1,6 @@
 export type User = {
-  name: string;
   id: number;
+  name: string;
   username: string;
   email: string;
   discordId: string;
