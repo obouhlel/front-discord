@@ -7,11 +7,17 @@ const { data, pending, error } = useFetch<{commands: Commands}>("/commands", {
 });
 
 const { user } = useAuth();
+
+const mounted = ref<boolean>(false);
+
+onMounted(() => {
+  mounted.value = true;
+})
 </script>
 <template>
   <div class="flex flex-col items-center justify-start mt-5 px-2">
     <BotCard />
-    <div v-if="user">
+    <div v-if="mounted && user" class="flex flex-col col-1 justify-center items-center">
       <img :src="`https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatarId}.png`" class="rounded-full" width="100px" height="100px">
       <h1 class="text-2xl font-bold">Hello {{ user.username }}</h1>
     </div>

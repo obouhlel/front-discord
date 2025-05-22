@@ -12,11 +12,11 @@ const { user, login, logout, fetchUser } = useAuth();
 await fetchUser();
 
 const handleLogin = () => {
-  login()
+  login();
 }
 
 const handleLogout = async () => {
-  await logout()
+  await logout();
 }
 
 onMounted(() => {

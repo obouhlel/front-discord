@@ -13,11 +13,10 @@ export function useAuth() {
         baseURL: apiBase,
         credentials: 'include',
       });
-      if (!data.value) throw new Error("User not found");
+      if (!data.value) throw Error("User not found");
       user.value = data.value;
-    } catch (e) {
-      console.error("fetchUser error:", e);
-      user.value = null;
+    } catch {
+      console.error("User not found");
     }
   };
 
@@ -25,19 +24,17 @@ export function useAuth() {
     window.location.href = `${apiBase}/auth/discord/login`;
   };
 
-  const logout = async () => {
+  const logout = async (): Promise<void> => {
     try {
-      await $fetch("/logout", {
+      await $fetch<{success: boolean}>("/logout", {
         method: "POST",
-        data: {},
         headers,
         baseURL: apiBase,
         credentials: 'include',
       });
-    } catch (e) {
-      console.error("logout fail:", e);
     } finally {
       user.value = null;
+      window.location.reload();
     }
   };
 
