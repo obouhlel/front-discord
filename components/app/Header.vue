@@ -36,7 +36,7 @@ onMounted(() => {
     </div>
     <div
       v-if="showModal"
-      class="absolute right-0 top-16 flex items-center justify-center bg-gray-400/50 dark:bg-black/50 min-w-[320px] py-4">
+      class="z-50 absolute right-0 top-16 flex items-center justify-center bg-gray-400/50 dark:bg-black/50 min-w-full sm:min-w-[320px] py-4">
       <button
         class="absolute top-2 right-2 text-2xl font-bold text-gray-500 hover:text-pink-500 cursor-pointer"
         @click="showModal = false">&times;</button>
