@@ -11,7 +11,7 @@ const attrsWithoutClass = computed(() => {
 <template>
   <button
     :class="[
-      'text-sm text-pink-50 hover:text-pink-950 font-bold transition-colors px-2 py-1 rounded bg-pink-500 hover:bg-pink-200',
+      'text-sm text-pink-50 hover:text-pink-950 font-bold transition-colors px-2 py-1 rounded bg-pink-500 hover:bg-pink-200 cursor-pointer',
       $attrs.class
     ]"
     type="button"
