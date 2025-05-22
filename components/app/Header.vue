@@ -37,11 +37,8 @@ onMounted(() => {
     <div
       v-if="showModal"
       class="z-50 absolute right-0 top-16 flex items-center justify-center bg-gray-400/50 dark:bg-black/50 min-w-full sm:min-w-[320px] py-4">
-      <button
-        class="absolute top-2 right-2 text-2xl font-bold text-gray-500 hover:text-pink-500 cursor-pointer"
-        @click="showModal = false">&times;</button>
       <div class="flex flex-col items-center gap-4">
-        <div class="flex gap-2 mt-4">
+        <div class="flex gap-2 mt-4 bg-white dark:bg-gray-700 px-3 py-2 rounded">
           <button 
             v-for="mode in modes" :key="mode.value" class="cursor-pointer text-2xl font-bold transition-colors"
             :class="mounted && colorMode.preference === mode.value ? 'text-pink-500' : 'text-black dark:text-white'"
@@ -51,7 +48,9 @@ onMounted(() => {
         </div>
         <div v-if="user" class="flex flex-col col-1 justify-center items-center space-y-4">
           <img :src="`https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatarId}.png`" class="rounded-full" width="100" height="100">
-          <h1 class="text-2xl font-bold">{{ user.username }}</h1>
+          <div class="bg-white dark:bg-gray-700 px-3 py-2 rounded">
+            <h1 class="text-2xl font-bold">{{ user.username }}</h1>
+          </div>
           <UiButton @click="handleLogout">Logout</UiButton>
         </div>
         <UiButton v-else @click="handleLogin">Login</UiButton>
